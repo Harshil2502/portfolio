@@ -1,10 +1,17 @@
 import Lottie from 'lottie-react'
 import React from 'react'
-import contactAnimation from '../../Assets/contactaninmation.json'
+import {motion as m} from 'framer-motion'
+import { fadeAnimation, slideAnimation } from '../../Assets/motion'
+import Home from '../../Module/Home/Home'
+
+
 function HomePage() {
   return (
-    <div className=' text-red-600 font-bold w-screen bg-white h-screen flex items-center justify-center overflow-hidden'>
-      <Lottie animationData={contactAnimation }/>     </div>
+    <m.div
+    {...fadeAnimation}
+    className=' overflow-hidden '>
+ <Home/>  
+    </m.div>
   )
 }
 
