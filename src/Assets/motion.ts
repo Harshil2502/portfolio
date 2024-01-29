@@ -6,7 +6,7 @@ export const slideAnimation = (direction:any) => {
       x: direction === "left" ? -100 : direction === "right" ? 100 : 0,
       y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
       opacity: 0,
-      transition: { ...transition, delay: 0.5 },
+      transition: { ...transition, delay: 1 },
     },
     animate: {
       x: 0,
@@ -67,4 +67,51 @@ export const headContainerAnimation = {
   initial: { x: -100, opacity: 0, transition: { ...transition, delay: 0.5 } },
   animate: { x: 0, opacity: 1, transition: { ...transition, delay: 0 } },
   exit: { x: -100, opacity: 0, transition: { ...transition, delay: 0 } },
+};
+
+
+export function slideInFromLeft(delay: number) {
+  return {
+    hidden: { x: -100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: delay,
+        duration: 0.5,
+      },
+    },
+  };
+}
+
+export function slideInFromRight(delay: number) {
+  return {
+    hidden: { x: 100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: delay,
+        duration: 0.5,
+      },
+    },
+  };
+}
+
+export const textVariant = (delay:any) => {
+  return {
+    hidden: {
+      y: -50,
+      opacity: 0,
+    },
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "spring",
+        duration: 1.25,
+        delay: delay,
+      },
+    },
+  };
 };
