@@ -45,26 +45,37 @@ function TestimonialsSection() {
               infinite={true}
               transitionDuration={10}
             >
-              {[1, 2, 3, 4].map((item) => {
+              {[
+                {
+                testimonial:"I highly recommend Harshil for his exceptional dedication, quick learning, and consistent commitment to delivering high-quality work. Harshil's positive attitude and effective collaboration have significantly contributed to the team's success.",
+                name :"Manoj Singh",
+                position:"Team Lead "
+
+
+              },
+                {
+                testimonial:
+                "Working with Harshil has been a pleasure. Their React.js expertise and dedication to detail ensured our project's success. Their ability to solve complex problems swiftly is commendable. Highly recommended!",
+                name :"Harshit Dayani",
+                position:"Senior Software Developer"
+
+
+              },
+            ].map((item) => {
                 return (
                   <div
-                    key={item}
+                    key={item.name}
                     className="flex justify-between items-center flex-col max-w-[78.5rem] mx-auto pb-[2rem]"
                   >
                     <article>
                       <p className="text-[1.5rem] font-medium leading-[32px] pt-[2.4rem] pb-[3.2rem] text-center text-white">
-                        “Lorem ipsum dolor sit amet consectetur. Urna sem enim
-                        feugiat felis lectus sit vulputate velit nibh. Feugiat
-                        sit mauris potenti nec turpis amet aliquet est vitae.
-                        Aliquam in eget eget in commodo nisl ultrices molestie.
-                        Tristique egestas sagittis in facilisi purus at mi
-                        maecenas.”
+                      {item?.testimonial}
                       </p>
                       <h3 className="text-[1.4rem] font-semibold leading-normal text-center text-gray-200">
-                        Harsh Singh
+                       {item?.name}
                       </h3>
                       <h4 className="text-light-primaryGrey-tints-500 text-[1.4rem] font-normal text-center pb-[3.2rem]  text-gray-200">
-                       Software Developer
+                       {item?.position}
                       </h4>
                     </article>
                     {/* <img alt="banner" src={images.testimonialimage} /> */}

@@ -4,7 +4,7 @@ import ReactTyped from "react-typed";
 import { fadeAnimation, slideAnimation } from "../../Assets/motion";
 import Image from "../../Assets/Images/image";
 function Home() {
-  const strArray = ["Developer", "Engineer", "ProblemSolver"];
+  const strArray = ["Developer", "Engineer", "Learner"];
 
   return (
     <div  id="AboutMe" className={`w-full min-h-screen bg-[#030014] flex items-center justify-around  text-white`}>
