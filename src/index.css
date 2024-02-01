@@ -61,7 +61,8 @@
       }
 
       .footer {
-        height: 40vh;
+       
+        padding: 10px;
         width: 100vw;
         z-index: 50;
         display: flex;
